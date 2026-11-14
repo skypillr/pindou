@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>试用授权码 · 拼豆图纸定制系统</title>
+<style>*{box-sizing: border-box}body{margin: 0;min-height: 100vh;padding: 28px 16px;display: flex;align-items: flex-start;justify-content: center;background: #0f172a;background-image: radial-gradient(circle at 20% 0%,rgba(102,126,234,0.28),transparent 55%),radial-gradient(circle at 85% 10%,rgba(118,75,162,0.26),transparent 50%);font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Roboto,sans-serif;color: #333}.card{width: 620px;max-width: 100%;background: #fff;border-radius: 14px;padding: 28px;box-shadow: 0 24px 70px rgba(0,0,0,0.45)}h1{font-size: 20px;margin: 0 0 6px}.sub{font-size: 13px;color: #888;line-height: 1.7;margin: 0 0 20px}.codes{display: flex;flex-direction: column;gap: 8px}.code-item{display: flex;align-items: center;gap: 10px;padding: 10px 12px;border: 1px solid #ececf3;border-radius: 8px;background: #fafbff}.code-text{flex: 1;min-width: 0;font-family: ui-monospace,Menlo,Consolas,monospace;font-size: 12px;color: #333;word-break: break-all;line-height: 1.5}.code-meta{font-size: 11px;color: #aaa;white-space: nowrap}.copy-btn{flex-shrink: 0;padding: 6px 12px;border: none;border-radius: 6px;background: #667eea;color: #fff;font-size: 12px;font-family: inherit;cursor: pointer}.copy-btn:hover{background: #5a6fd6}.copy-btn.done{background: #2a9d4f}.empty{padding: 34px 12px;text-align: center;color: #aaa;font-size: 13px;border: 1px dashed #ddd;border-radius: 8px;background: #fafafa;line-height: 1.8}.footer{margin-top: 20px;padding-top: 14px;border-top: 1px dashed #eee;font-size: 12px}.footer a{color: #667eea;text-decoration: none}.footer a:hover{text-decoration: underline}</style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎁 试用授权码</h1>
+    <p class="sub">
+      复制下方向导码，回到「拼豆图纸定制系统」的激活窗口粘贴并点击「激活」即可开始试用。<br>
+      Copy a code below, paste it into the activation window and click Activate.
+    </p>
+
+    <div class="codes" id="codeList"></div>
+
+    <div class="footer">
+      <a href="index.html">← 返回拼豆图纸定制系统 / Back to app</a>
+    </div>
+  </div>
+
+  <script>const t=[],e=document.getElementById("codeList");function n(t,e,n){const o=document.createElement(t);return e&&(o.className=e),null!=n&&(o.textContent=n),o}function o(t,e){const n=()=>{e.textContent="已复制",e.classList.add("done"),setTimeout(()=>{e.textContent="复制",e.classList.remove("done")},1500)};navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(t).then(n).catch(()=>c(t,n)):c(t,n)}function c(t,e){const n=document.createElement("textarea");n.value=t,n.style.cssText="position:fixed;left:-9999px;top:0",document.body.appendChild(n),n.select();try{document.execCommand("copy"),e()}catch(t){}n.remove()}function d(){e.innerHTML="",t.length?t.forEach(t=>{const c="string"==typeof t?t:t.code,d="string"==typeof t?"":t.note||"",a=n("div","code-item");a.appendChild(n("div","code-text",c)),d&&a.appendChild(n("div","code-meta",d));const i=n("button","copy-btn","复制");i.type="button",i.addEventListener("click",()=>o(c,i)),a.appendChild(i),e.appendChild(a)}):e.appendChild(n("div","empty","暂无可用试用码，请联系管理员获取。\nNo trial codes available yet. Please contact the administrator."))}d();</script>
+</body>
+</html>

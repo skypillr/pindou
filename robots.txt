@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
+Disallow: /trial.html
 
 Sitemap: https://pd.pindou.ha.cn/sitemap.xml
